@@ -1,0 +1,72 @@
+<html>
+<head>
+<style type="text/css">
+#par1{
+	border : 2px solid yellow;
+	background-color: green;
+	width: 300px;
+	position : absolute;
+	top : 160px;
+	left : 200px;
+	z-index = 0;
+	}
+#par2{ 
+        border : 2px solid red;
+        background-color: red;
+        width: 300px;
+        position : absolute;
+        top : 180px;
+        left : 220px;
+	z-index = 0;
+        }
+#par3{ 
+        border : 2px solid green;
+        background-color: yellow;
+        width: 300px;
+        position : absolute;
+        top : 200px;
+        left : 240px;
+	z-index = 0;
+        }
+</style>
+
+</head>
+<body>
+<script type=text/javascript>
+	var topLayer="par1";
+	var opos;
+	function mover(toTop,pos)
+	{
+		document.getElementById(toTop).style.zIndex="4";
+		topLayer=toTop;
+		opos=pos;
+	}
+	function moveBack()
+	{
+		document.getElementById(topLayer).style.zIndex=opos;
+	}
+</script>
+<div id="par1"  onmouseover="mover('par1','1')" onmouseout=moveBack()>
+	This is the first paragraph
+	something to add more data
+	 something to add more data
+ something to add more data
+ something to add more data
+ something to add more data
+</div>
+<div id="par2" onmouseover="mover('par2','1')" onmouseout=moveBack()>
+        This is the second paragraph
+	 something to add more data
+ something to add more data
+ something to add more data
+ something to add more data
+</div>
+<div id="par3" onmouseover="mover('par3','1')" onmouseout=moveBack()>
+        This is the third paragraph
+ something to add more data
+ something to add more data
+ something to add more data
+ something to add more data
+</div>
+</body>
+</html>
