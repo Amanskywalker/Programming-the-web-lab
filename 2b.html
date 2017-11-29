@@ -1,0 +1,28 @@
+<html>
+        <head>
+                <title>USN & Sem</title>
+        <head>
+        <body>
+        <script type="text/javascript">
+                var n_usn = prompt("Enter the USN");
+                var n_sem = prompt("Enter the Sem");
+		var res;    
+                var pat_usn = new RegExp("^[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]$");
+		var pat_sem = new RegExp("^[1-8]$");
+                if(pat_usn.test(n_usn) && pat_sem.test(n_sem))
+                        res = "Both USN & Sem are valid";
+		else if(!pat_usn.test(n_usn) && pat_sem.test(n_sem))
+			res = "Invalid USN & Valid Sem";
+		else if(pat_usn.test(n_usn) && !pat_sem.test(n_sem))
+			res = "Valid USN & Invalid Sem";
+		else if(!pat_usn.test(n_usn) && !pat_sem.test(n_sem))		
+                        res = "Both USN & Sem are invalid";
+                else 
+			res ="Unknown error occured"; 
+		
+		alert(res);
+
+        </script>
+        </body>
+</html>
+
