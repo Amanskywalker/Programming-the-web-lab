@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Fibonacci Series</title>
+	<head>
+	<body>
+	<script type="text/javascript">
+		var n = prompt("Enter the number");
+		var res="1 1",a = 1,b =1,t;
+		if(n==0)
+			res = 1;
+		if(n==1)
+			res = "1 1";
+		if(n>1)
+			for(i=1;n>i;++i)
+			{
+				t = a+b;
+				a = b;
+				b = t;
+				res = res.concat(" "+t);
+			}
+			
+		alert("Result is : "+res);
+			
+	</script>
+	</body>
